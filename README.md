@@ -20,7 +20,7 @@ google-cloud-storage - https://pypi.org/project/google-cloud-storage/
   - Add to env variable
 - Google Cloud Storage Service KEY
   - Generate service key and store it as JSON file
-  - Copy JSON file to gcp_creds.json
+  - Copy JSON file to gcp_creds.json (files_backup/backup/upload/gcp_creds.json)
 - Update ENV variables with valid inputs
   - Copy .env.example to .env
   - Read the comments in .env file an configure as necessary
