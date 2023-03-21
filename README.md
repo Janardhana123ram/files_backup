@@ -1,9 +1,9 @@
 # Backup
 This tool is used to do files backup to the AWS S3 and Google Cloud Storage
 
-Tools being used in this project
-boto3 - https://pypi.org/project/boto3/
-google-cloud-storage - https://pypi.org/project/google-cloud-storage/
+## Tools being used in this project
+- boto3 - https://pypi.org/project/boto3/
+- google-cloud-storage - https://pypi.org/project/google-cloud-storage/
 
 ## Requirements
 - Python3
