@@ -3,8 +3,10 @@ import boto3
 import pytest
 from google.cloud import storage
 from upload import Upload
+import logging
 
-upload = Upload()
+logger = logging.getLogger("test logger")
+upload = Upload(log=logger)
 
 def test_load_to_s3():
     """Upload file to AWS S3 bucket with test file."""
