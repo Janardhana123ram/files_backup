@@ -1,4 +1,3 @@
-import logging
 import boto3
 from botocore.exceptions import ClientError
 from google.cloud import storage
@@ -40,7 +39,7 @@ class Upload:
             bucket.upload_file(_file, object_name)
             return True
         except Exception as error:
-            logging.error("error: {}".format(error))
+            self.log.error(msg=str(error))
             return False
 
     def load_to_gcs(self, _file, bucket):
@@ -57,7 +56,7 @@ class Upload:
             blob.upload_from_filename(_file)
             return True
         except Exception as error:
-            logging.error(error)
+            self.log.error(msg=str(error))
             return False
 
     def create_aws_session(self):
@@ -79,7 +78,7 @@ class Upload:
             bucket = s3.Bucket(os.environ["AWS_S3_BUCKET"])
             return bucket
         except ClientError as error:
-            logging.error(str(error))
+            self.log.error(msg=str(error))
             return False
 
     def create_gcs_session(self):
@@ -95,7 +94,7 @@ class Upload:
             )
             return client.get_bucket(os.environ["GCP_BUCKET"])
         except Exception as error:
-            logging.error(error)
+            self.log.error(msg=str(error))
             return False
 
     def run(self):
