@@ -12,7 +12,11 @@ setup(
     description="This tool is used to upload files to AWS and Google Cloud storage",
     author="Janardhana",
     author_email="janardhan321ram@gmail.com",
-    install_requires=[],
+    install_requires=[
+        "basescript",
+        "boto3==1.26.90",
+        "google-cloud-storage==2.7.0",
+    ],
     classifiers=[
         "Environment :: Console",
         "Programming Language :: Python :: 3.7",
