@@ -139,8 +139,7 @@ class Upload:
         if aws_files:
             bucket = self.create_aws_session()
             for file in aws_files:
-                if not bucket:
-                    self.load_to_s3(file, bucket)
+                self.load_to_s3(file, bucket)
 
         # Perform upload operation to GSC bucket if files exists related DOCS
         if gcp_files:
