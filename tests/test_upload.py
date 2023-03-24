@@ -2,7 +2,7 @@ import os
 import boto3
 import pytest
 from google.cloud import storage
-from upload import Upload
+from backup.upload.upload import Upload
 import logging
 
 logger = logging.getLogger("test logger")
