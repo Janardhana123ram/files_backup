@@ -116,7 +116,7 @@ class Upload:
             client = storage.Client.from_service_account_json(
                 json_credentials_path=self.gcp_creds
             )
-            return client.get_bucket(os.environ["GCP_BUCKET"])
+            return storage.Bucket(client, os.environ["GCP_BUCKET"])
         except Exception as error:
             self.log.error(msg=str(error))
             return False
